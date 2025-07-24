@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📱🇪🇹 GPA App</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📱🇪🇹 GPA App</h1>
+
+    <section id="dashboard">
+      <button onclick="showSection('gpa')">Calculate GPA</button>
+      <button onclick="showSection('notes')">My Notes</button>
+      <button onclick="showSection('tasks')">Assignments</button>
+      <button onclick="showSection('profile')">Profile</button>
+    </section>
+
+    <section id="gpa" class="hidden">
+      <h2>GPA Calculator</h2>
+      <input type="number" id="grade" placeholder="Enter grade">
+      <button onclick="calculateGPA()">Add Grade</button>
+      <p id="gpaResult"></p>
+      <button onclick="backToDashboard()">Back to Dashboard</button>
+    </section>
+
+    <section id="notes" class="hidden">
+      <h2>Notes</h2>
+      <textarea id="noteInput" placeholder="Add a note"></textarea>
+      <button onclick="saveNote()">Save Note</button>
+      <ul id="noteList"></ul>
+      <button onclick="backToDashboard()">Back to Dashboard</button>
+    </section>
+
+    <section id="tasks" class="hidden">
+      <h2>Assignments & Schedule</h2>
+      <input type="text" id="taskInput" placeholder="Assignment or Task">
+      <button onclick="addTask()">Add Task</button>
+      <ul id="taskList"></ul>
+      <button onclick="backToDashboard()">Back to Dashboard</button>
+    </section>
+
+    <section id="profile" class="hidden">
+      <h2>Profile</h2>
+      <input type="text" id="username" placeholder="Enter name" />
+      <input type="text" id="recovery" placeholder="Recovery word" />
+      <button onclick="saveProfile()">Save Profile</button>
+      <p id="profileSaved"></p>
+      <button onclick="backToDashboard()">Back to Dashboard</button>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+                          </html>
